@@ -9,7 +9,12 @@ def augmentMatrix(A, b):
             A[i]+=b[i]
         return A
 
-A = generateMatrix(3,seed,singular=False)
-b = np.ones(shape=(3,1),dtype=int) # it doesn't matter
+# A = generateMatrix(3,seed,singular=False)
+# b = np.ones(shape=(3,1),dtype=int) # it doesn't matter
+# Ab = augmentMatrix(A.tolist(),b.tolist()) # 请确保你的增广矩阵已经写好了
+# printInMatrixFormat(Ab,padding=3,truncating=0)
+
+A = generateMatrix(3,seed,singular=True)
+b = np.ones(shape=(3,1),dtype=int)
 Ab = augmentMatrix(A.tolist(),b.tolist()) # 请确保你的增广矩阵已经写好了
 printInMatrixFormat(Ab,padding=3,truncating=0)
